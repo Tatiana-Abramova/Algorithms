@@ -1,16 +1,15 @@
-package task_01;
-
-import java.math.BigInteger;
+package algo.task_01;
 
 /**
- * Счастливые билеты 20
+ * Lucky tickets.
  *
- * Билет с 2N значным номером считается счастливым,
- * если сумма N первых цифр равна сумме последних N цифр.
- * Посчитать, сколько существует счастливых 2N-значных билетов.
+ * A ticket with 2N-digits number is lucky,
+ * if a sum of its first N digits equals to a sum of its last N digits.
  *
- * Начальные данные: число N от 1 до 10.
- * Вывод результата: количество 2N-значных счастливых билетов.
+ * Calculate an amount of all possible 2N-digits lucky tickets.
+ *
+ * Initial data: a number from 1 to N.
+ * Required result: am amount of all possible 2N-digits lucky tickets.
  */
 public class LuckyTicket {
     public static long calc(int number) {
@@ -24,7 +23,7 @@ public class LuckyTicket {
             int sum = 0;
             int var = i;
             for (int j = (int) Math.pow(10, number - 1); j >= 10; j /= 10) {
-                sum += var/j;
+                sum += var / j;
                 var %= j;
             }
             sum += var;
@@ -34,7 +33,7 @@ public class LuckyTicket {
         // Calculate all the combinations of equal sums from both sides
         long count = 1;
         for (int i = 0; i < countSum; i++) {
-            count += array[i]*array[i];
+            count += array[i] * array[i];
         }
         System.out.println(count);
         return count;
