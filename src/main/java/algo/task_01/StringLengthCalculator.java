@@ -6,7 +6,7 @@ package algo.task_01;
 public class StringLengthCalculator {
 
     /**
-     * Calculates a string length
+     * Calculates string length
      * @param string an input string
      * @return string length
      */

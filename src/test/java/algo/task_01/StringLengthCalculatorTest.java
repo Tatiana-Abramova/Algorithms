@@ -14,7 +14,7 @@ public class StringLengthCalculatorTest extends BaseTest {
 
     private static final String PATH = BaseTest.ROOT_DATA_PATH + "/task_01/0.String";
 
-    static Stream<Arguments> getAllArgs() throws Exception {
+    private static Stream<Arguments> getAllArgs() throws Exception {
         Map<String, String> fileNames = BaseTest.getFilesList(PATH);
         return BaseTest.getArguments(fileNames);
     }

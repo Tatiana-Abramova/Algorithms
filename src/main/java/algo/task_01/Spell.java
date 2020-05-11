@@ -7,7 +7,6 @@ import java.util.function.BiFunction;
  */
 public class Spell {
 
-
     /**
      * Prints any figure based on a given function (spell) in a square with <b>size</b>
      * @param fn bi function

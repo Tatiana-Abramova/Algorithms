@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class LuckyTicketTest extends BaseTest {
     private static final String PATH = BaseTest.ROOT_DATA_PATH + "/task_01/1.Tickets";
 
-    static Stream<Arguments> getAllArgs() throws Exception {
+    private static Stream<Arguments> getAllArgs() throws Exception {
         Map<String, String> fileNames = BaseTest.getFilesList(PATH);
         return BaseTest.getArguments(fileNames);
     }

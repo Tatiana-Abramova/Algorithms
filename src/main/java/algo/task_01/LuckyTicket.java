@@ -12,6 +12,8 @@ package algo.task_01;
  * Required result: am amount of all possible 2N-digits lucky tickets.
  */
 public class LuckyTicket {
+
+    // TODO write better algorithm
     public static long calc(int number) {
 
         // Create an array where we will add quantities of combinations for each digits sum
@@ -35,7 +37,7 @@ public class LuckyTicket {
         for (int i = 0; i < countSum; i++) {
             count += array[i] * array[i];
         }
-        System.out.println(count);
+        System.out.println(String.format("Amount of all possible 2N-digits (where N = %s) lucky tickets: %s", number, count));
         return count;
     }
 }
