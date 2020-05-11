@@ -1,34 +1,43 @@
 package algo;
 
-import algo.task_02.Exponentiation;
+import static algo.task_02.FibonacciNumbers.*;
 
 public class Application {
     public static void main(String[] args) {
-        Exponentiation.calcByLoop(3, 1);
-        Exponentiation.calcByBinaryDecomposition(3, 1);
+        System.out.println(calcRecursion(0));
+        System.out.println(calcRecursion(1));
+        System.out.println(calcRecursion(2));
+        System.out.println(calcRecursion(3));
+        System.out.println(calcRecursion(4));
+        System.out.println(calcRecursion(5));
+        System.out.println(calcRecursion(6));
+        System.out.println(calcRecursion(7));
         System.out.println();
-        Exponentiation.calcByLoop(3, 2);
-        Exponentiation.calcByBinaryDecomposition(3, 2);
+        System.out.println(calcIteration(0));
+        System.out.println(calcIteration(1));
+        System.out.println(calcIteration(2));
+        System.out.println(calcIteration(3));
+        System.out.println(calcIteration(4));
+        System.out.println(calcIteration(5));
+        System.out.println(calcIteration(6));
+        System.out.println(calcIteration(7));
         System.out.println();
-        Exponentiation.calcByLoop(3, 3);
-        Exponentiation.calcByBinaryDecomposition(3, 3);
+        System.out.println(calcGoldenRatio(0));
+        System.out.println(calcGoldenRatio(1));
+        System.out.println(calcGoldenRatio(2));
+        System.out.println(calcGoldenRatio(3));
+        System.out.println(calcGoldenRatio(4));
+        System.out.println(calcGoldenRatio(5));
+        System.out.println(calcGoldenRatio(6));
+        System.out.println(calcGoldenRatio(7));
         System.out.println();
-        Exponentiation.calcByLoop(3, 4);
-        Exponentiation.calcByBinaryDecomposition(3, 4);
-        System.out.println();
-        Exponentiation.calcByLoop(3, 55);
-        Exponentiation.calcByBinaryDecomposition(3, 55);
-        System.out.println();
-        Exponentiation.calcByLoop(3, 67);
-        Exponentiation.calcByBinaryDecomposition(3, 67);
-        System.out.println();
-        Exponentiation.calcByLoop(3.2, 70);
-        Exponentiation.calcByBinaryDecomposition(3.2, 70);
-        System.out.println();
-        Exponentiation.calcByLoop(3.4, 8);
-        Exponentiation.calcByBinaryDecomposition(3.4, 8);
-        System.out.println();
-        Exponentiation.calcByLoop(3, 9);
-        Exponentiation.calcByBinaryDecomposition(3, 9);
+        System.out.println(calcByMatrix(0));
+        System.out.println(calcByMatrix(1));
+        System.out.println(calcByMatrix(2));
+        System.out.println(calcByMatrix(3));
+        System.out.println(calcByMatrix(4));
+        System.out.println(calcByMatrix(5));
+        System.out.println(calcByMatrix(6));
+        System.out.println(calcByMatrix(7));
     }
 }

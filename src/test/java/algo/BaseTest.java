@@ -28,7 +28,7 @@ public class BaseTest {
             String[] arrayOut = getFileContent(entry.getValue()).split("\\n");
             Object[] array = new Object[arrayIn.length + arrayOut.length];
             System.arraycopy(arrayIn, 0, array, 0, arrayIn.length);
-            System.arraycopy(arrayOut, 0, array, (array.length - arrayIn.length) + 1, arrayOut.length);
+            System.arraycopy(arrayOut, 0, array, arrayIn.length, arrayOut.length);
             args.add(Arguments.of(array));
         }
         Arguments[] argsArr = new Arguments[args.size()];
@@ -117,7 +117,7 @@ public class BaseTest {
                 table[i + 1][j + 1] = execute(actions[j].getAction());
             }
         }
-
+        System.out.println("Comparative table has been created.");
         return table;
     }
 
@@ -127,8 +127,13 @@ public class BaseTest {
      */
     protected void printTable(Object[][] table) {
         System.out.println("Comparative table in ns:");
+        int n = table[0].length;
+        String pattern = "";
+        for (int i = 0; i < n; i++) {
+            pattern += "%-40s";
+        }
         for (final Object[] row : table) {
-            System.out.format("%-40s%-40s%-40s%-40s\n", row);
+            System.out.format(pattern + "\n", row);
         }
     }
 
