@@ -11,6 +11,7 @@ public class FibonacciNumbers {
         if (n == 1) {
             return 1;
         }
+
         return calcRecursion(n - 2) + calcRecursion(n - 1);
     }
 
@@ -49,15 +50,16 @@ public class FibonacciNumbers {
         for (long power = n; power > 0; power >>= 1) {
             if ((power & 1) > 0) {
 
-                long temp = r2;
+                long temp1 = r1;
+                long temp2 = r2;
                 r2 = m2*r2 + m1*r1;
-                r1 = m1*temp + m0*r1;
-                r0 = m1*m1 + m0*r0;
+                r1 = m1*temp2 + m0*r1;
+                r0 = m1*temp1 + m0*r0;
             }
 
+            long temp1 = m1;
             long temp2 = m2;
             m2 = m2*m2 + m1*m1;
-            long temp1 = m1;
             m1 = m1*temp2 + m0*m1;
             m0 = temp1*temp1 + m0*m0;
         }
