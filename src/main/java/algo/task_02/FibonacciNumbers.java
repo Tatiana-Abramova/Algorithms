@@ -2,8 +2,18 @@ package algo.task_02;
 
 import static algo.task_02.Exponentiation.calcByBinaryDecomposition;
 
+/**
+ * Calculate Nth element of Fibonacci sequence.
+ * Fn = Fn-2 + Fn-1
+ * 0,1,1,2,3,5,8,13,21,34,55,89,144,...
+ */
 public class FibonacciNumbers {
 
+    /**
+     * Calculates Nth number of Fibonacci sequence. Recursion.
+     * @param n a number of Fibonacci sequence
+     * @return Nth element of Fibonacci sequence
+     */
     public static long calcRecursion(int n) {
         if (n == 0) {
             return 0;
@@ -15,6 +25,11 @@ public class FibonacciNumbers {
         return calcRecursion(n - 2) + calcRecursion(n - 1);
     }
 
+    /**
+     * Calculates Nth number of Fibonacci sequence. Loop.
+     * @param n a number of Fibonacci sequence
+     * @return Nth element of Fibonacci sequence
+     */
     public static long calcIteration(int n) {
         if (n == 0) {
             return 0;
@@ -32,6 +47,11 @@ public class FibonacciNumbers {
         return result;
     }
 
+    /**
+     * Calculates Nth number of Fibonacci sequence. Golden Ratio formula.
+     * @param n a number of Fibonacci sequence
+     * @return Nth element of Fibonacci sequence
+     */
     public static long calcGoldenRatio(int n) {
         double sqrt5 = Math.sqrt(5);
         double phi = (1 + sqrt5)/2;
@@ -39,6 +59,11 @@ public class FibonacciNumbers {
         return (long)res;
     }
 
+    /**
+     * Calculates Nth number of Fibonacci sequence. Matrices multiplication.
+     * @param n a number of Fibonacci sequence
+     * @return Nth element of Fibonacci sequence
+     */
     public static long calcByMatrix(int n) {
         long m0 = 0;
         long m1 = 1;
@@ -60,7 +85,7 @@ public class FibonacciNumbers {
             long temp1 = m1;
             long temp2 = m2;
             m2 = m2*m2 + m1*m1;
-            m1 = m1*temp2 + m0*m1;
+            m1 = m1*(temp2 + m0);
             m0 = temp1*temp1 + m0*m0;
         }
         return r0;

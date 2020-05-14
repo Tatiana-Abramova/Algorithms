@@ -7,7 +7,7 @@ package algo.task_02;
 public class Exponentiation {
 
     /**
-     * Calculates and prints the result of a real number A raised to a power of N: A^N. Simple multiplication in a loop.
+     * Calculates the result of a real number A raised to a power of N: A^N. Simple multiplication in a loop.
      * @param a a real number A > 0
      * @param n a power N >= 0
      * @return the result of a real number A raised to a power of N: A^N
@@ -21,7 +21,7 @@ public class Exponentiation {
     }
 
     /**
-     * Calculates and prints the result of a real number A raised to a power of N: A^N. By power of 2 with further multiplication.
+     * Calculates the result of a real number A raised to a power of N: A^N. By power of 2 with further multiplication.
      * @param a a real number A > 0
      * @param n a power N >= 0
      * @return the result of a real number A raised to a power of N: A^N
@@ -42,20 +42,20 @@ public class Exponentiation {
     }
 
     /**
-     * Calculates and prints the result of a real number A raised to a power of N: A^N. By binary decomposition.
+     * Calculates the result of a real number A raised to a power of N: A^N. By binary decomposition.
      * @param a a real number A > 0
      * @param n a power N >= 0
      * @return the result of a real number A raised to a power of N: A^N
      */
     public static double calcByBinaryDecomposition(double a, long n) {
         double result = 1;
-        double multiplier = a;
+    double multiplier = a;
         for (long power = n; power > 0; power >>= 1) {
-            if ((power & 1) > 0) {
-                result *= multiplier;
-            }
-            multiplier *= multiplier;
+        if ((power & 1) > 0) {
+            result *= multiplier;
         }
-        return result;
+        multiplier *= multiplier;
     }
+        return result;
+}
 }
