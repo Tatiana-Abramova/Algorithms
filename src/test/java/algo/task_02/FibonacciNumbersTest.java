@@ -13,7 +13,6 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static algo.task_02.FibonacciNumbers.*;
-import static algo.task_02.FibonacciNumbers.calcRecursion;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FibonacciNumbersTest extends BaseTest{
@@ -23,12 +22,6 @@ public class FibonacciNumbersTest extends BaseTest{
         Map<String, String> fileNames = BaseTest.getFilesList(PATH);
         return BaseTest.getArguments(fileNames);
     }
-
-/*    @ParameterizedTest
-    @MethodSource("getAllArgs")
-    void calcRecursionTest(String input, long expected) {
-        assertEquals(expected, calcRecursion(Integer.parseInt(input)));
-    }*/
 
     @ParameterizedTest
     @MethodSource("getAllArgs")
@@ -60,7 +53,6 @@ public class FibonacciNumbersTest extends BaseTest{
         int n = Integer.parseInt(String.valueOf(arg.get()[0]));
         return new Actions(
                 "Fibonacci N " + n,
-                //new Actions.ActionDetail("Recursion", () -> calcRecursion(n)),
                 new Actions.ActionDetail("Loop", () -> calcIteration(n)),
                 new Actions.ActionDetail("Formula", () -> calcGoldenRatio(n)),
                 new Actions.ActionDetail("Matrix", () -> calcByMatrix(n)));

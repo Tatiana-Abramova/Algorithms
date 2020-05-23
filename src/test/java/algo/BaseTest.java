@@ -24,8 +24,8 @@ public class BaseTest {
         List<Arguments> args = new ArrayList<>();
 
         for (Map.Entry<String, String> entry : fileNames.entrySet()) {
-            String[] arrayIn = getFileContent(entry.getKey()).split("\\n");
-            String[] arrayOut = getFileContent(entry.getValue()).split("\\n");
+            String[] arrayIn = getFileContent(entry.getKey()).split("\\n|\\r\\n");
+            String[] arrayOut = getFileContent(entry.getValue()).split("\\n|\\r\\n");
             Object[] array = new Object[arrayIn.length + arrayOut.length];
             System.arraycopy(arrayIn, 0, array, 0, arrayIn.length);
             System.arraycopy(arrayOut, 0, array, arrayIn.length, arrayOut.length);
@@ -88,12 +88,12 @@ public class BaseTest {
     }
 
     /**
-     * Takes a list of test argument as input data.
+     * Takes a list of calcMoves argument as input data.
      * Calls {@link #getActions(Arguments)} getActions} and {@link #execute(Action)} and build a table with execution times of different methods:
      * Test case    Method_1    Method_#
      * Case_1       123         001
      * Case_#       345         002
-     * @param args a list of test data to run methods under test with.
+     * @param args a list of calcMoves data to run methods under calcMoves with.
      * @return comparative table.
      */
     protected Object[][] getComparativeTable(List<Arguments> args) {
@@ -139,8 +139,8 @@ public class BaseTest {
 
     /**
      * Returns an array of actions (lambdas with methods) that we are going to measure.
-     * Should be implemented in a test class.
-     * @param arg test data that should be passed as parameters to methods under test.
+     * Should be implemented in a calcMoves class.
+     * @param arg calcMoves data that should be passed as parameters to methods under calcMoves.
      * @return an array of actions.
      */
     protected Actions getActions(Arguments arg) {

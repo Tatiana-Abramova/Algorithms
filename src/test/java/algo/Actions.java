@@ -8,7 +8,7 @@ public class Actions {
     /** Test name */
     private String testName;
 
-    /** Actions to test */
+    /** Actions to calcMoves */
     private ActionDetail[] actions;
 
     public Actions(String testName, ActionDetail... details) {
@@ -25,14 +25,14 @@ public class Actions {
     }
 
     /**
-     * Method under test and its description.
+     * Method under calcMoves and its description.
      */
     public static class ActionDetail {
 
         /** Description */
         private String actionName;
 
-        /** Method under test */
+        /** Method under calcMoves */
         private Action action;
 
         public ActionDetail(String actionName, Action action) {
@@ -50,7 +50,7 @@ public class Actions {
     }
 
     /**
-     * Functional interface that should be implemented with methods under test.
+     * Functional interface that should be implemented with methods under calcMoves.
      */
     public interface Action {
         void action();
