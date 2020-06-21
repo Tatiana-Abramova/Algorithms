@@ -13,7 +13,15 @@ import java.util.stream.Stream;
 import static algo.Actions.*;
 
 public class BaseTest {
+    /** Tests files location */
     protected static final String ROOT_DATA_PATH = "./tasks";
+
+    /** Number of runs for comparative tests */
+    private int runNumber = 1;
+
+    protected void setRunNumber(int runNum) {
+        this.runNumber = runNum;
+    }
 
     /**
      * Creates and returns a stream of arguments for unit tests.
@@ -76,15 +84,14 @@ public class BaseTest {
      * @return average execution time in ns.
      */
     protected String execute(Action fn) {
-        int runNum = 3;
         long startTime = System.nanoTime();
 
-        for (int i = 0; i < runNum; i++) {
+        for (int i = 0; i < runNumber; i++) {
             fn.action();
         }
 
         long stopTime = System.nanoTime();
-        return String.valueOf((stopTime - startTime) / runNum);
+        return String.valueOf((stopTime - startTime) / runNumber);
     }
 
     /**
@@ -130,7 +137,7 @@ public class BaseTest {
         int n = table[0].length;
         String pattern = "";
         for (int i = 0; i < n; i++) {
-            pattern += "%-40s";
+            pattern += "%-30s";
         }
         for (final Object[] row : table) {
             System.out.format(pattern + "\n", row);
