@@ -3,6 +3,9 @@ package algo.task_04_dynamic_arrays;
 import algo.task_04_dynamic_arrays.dynamic_arrays.Array;
 import org.junit.Assert;
 
+/**
+ * a base class for the dynamic array implementations tests.
+ */
 public abstract class ArrayTest {
     static String element = "Test";
     Array<String> array;

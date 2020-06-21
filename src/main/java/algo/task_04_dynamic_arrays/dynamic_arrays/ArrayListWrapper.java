@@ -3,6 +3,11 @@ package algo.task_04_dynamic_arrays.dynamic_arrays;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * A wrapper for the standard Java ArrayList.
+ * It is used for the comparative performance testing of the different implementations of dynamic arrays.
+ * @param <T> a type of an element.
+ */
 public class ArrayListWrapper<T> implements Array<T> {
 
     private List<T> arrayList;

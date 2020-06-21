@@ -7,6 +7,9 @@ import org.junit.jupiter.params.provider.Arguments;
 import java.util.Map;
 import java.util.stream.Stream;
 
+/**
+ * A base class for the dynamic array implementations comparative performance testing.
+ */
 public class ArraysComparativeTest extends BaseTest {
     private static final String PATH = BaseTest.ROOT_DATA_PATH + "/task_04_dynamic_arrays";
 

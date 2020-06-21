@@ -1,7 +1,13 @@
 package algo.task_04_dynamic_arrays.dynamic_arrays;
 
+/**
+ * A simple implementation of dynamic array.
+ * It creates a new array each time, when a new element is added or removed.
+ * @param <T> a type of an element.
+ */
 public class SingleArray<T> implements Array<T> {
 
+    /** An inner array to store elements. */
     private Object[] array;
 
     public SingleArray() {

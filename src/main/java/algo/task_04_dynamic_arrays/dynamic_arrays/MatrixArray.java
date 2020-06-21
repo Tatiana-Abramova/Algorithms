@@ -1,9 +1,21 @@
 package algo.task_04_dynamic_arrays.dynamic_arrays;
 
+/**
+ * An implementation of dynamic array - an array of arrays.
+ * When a new element is added, it checks if the current inner sub-array has sufficient length.
+ * If it does not, then a new array is added to the main array.
+ * Sub-arrays have type of VectorArray.
+ * @param <T> a type of an element.
+ */
 public class MatrixArray<T> implements Array<T> {
 
+    /** The size of the array. */
     private int size;
+
+    /** The length of the sub-arrays. */
     private int vector;
+
+    /** The main array. */
     private Array<Array<T>> mainArray;
 
     public MatrixArray(int vector) {

@@ -1,9 +1,20 @@
 package algo.task_04_dynamic_arrays.dynamic_arrays;
 
+/**
+ * An implementation of dynamic array.
+ * When a new element is added, it checks if the current inner array has sufficient length.
+ * If it does not, then a new array is created with length equal length of the current array plus the vector parameter.
+ * @param <T> a type of an element.
+ */
 public class VectorArray<T> implements Array<T> {
 
+    /** An inner array to store elements. */
     private Object[] array;
+
+    /** A number by which the length of the array is increased. */
     private int vector;
+
+    /** The size of the array. */
     private int size;
 
     public VectorArray(int vector) {

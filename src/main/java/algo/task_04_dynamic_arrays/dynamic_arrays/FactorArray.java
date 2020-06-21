@@ -1,9 +1,20 @@
 package algo.task_04_dynamic_arrays.dynamic_arrays;
 
+/**
+ * An implementation of dynamic array.
+ * When a new element is added, it checks if the current inner array has sufficient length.
+ * If it does not, then a new array is created with length equal length of the current array multiplied to the factor parameter.
+ * @param <T> a type of an element.
+ */
 public class FactorArray<T> implements Array<T> {
 
+    /** An inner array to store elements. */
     private Object[] array;
+
+    /** A number by which the length of the array is increased. */
     private int factor;
+
+    /** The size of the array. */
     private int size;
 
     public FactorArray(int factor, int initLength) {
