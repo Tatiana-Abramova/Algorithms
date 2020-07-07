@@ -11,11 +11,11 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class LuckyTicketTest extends BaseTest {
-    private static final String PATH = BaseTest.ROOT_DATA_PATH + "/task_01_combinatorics/1.Tickets";
+    private static final String PATH = ROOT_DATA_PATH + "/task_01_combinatorics/1.Tickets";
 
     private static Stream<Arguments> getAllArgs() throws Exception {
-        Map<String, String> fileNames = BaseTest.getFilesList(PATH);
-        return BaseTest.getArguments(fileNames);
+        Map<String, String> fileNames = getFilesList(PATH);
+        return getArguments(fileNames);
     }
 
     @ParameterizedTest

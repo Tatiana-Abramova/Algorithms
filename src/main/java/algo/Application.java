@@ -1,33 +1,16 @@
 package algo;
 
 
-import algo.task_04_dynamic_arrays.dynamic_arrays.*;
+import algo.task_05_heap_sort.HeapSort;
+import algo.task_05_heap_sort.ShellSort;
+
+import java.util.Arrays;
 
 public class Application {
     public static void main(String[] args) {
-        Array<String> singleArray = new SingleArray<>();
-        Array<String> vectorArray = new VectorArray<>();
-        Array<String> factorArray = new FactorArray<>();
-        Array<String> matrixArray = new MatrixArray<>();
-        testAddArray(singleArray, 10);
-        testAddArray(vectorArray, 100);
-        testAddArray(factorArray, 100);
-        testAddArray(matrixArray, 100);
-
-        singleArray.add("Added", 5);
-        vectorArray.add("Added", 25);
-        factorArray.add("Added", 55);
-        matrixArray.add("Added", 15);
-        System.out.println();
+        int[] array = new int[]{1,3,10,6,2,5,13,12,11,7,4,8,14,9};
+        ShellSort.sortHibbard(array);
+        System.out.println(Arrays.toString(array));
     }
 
-    private static void testAddArray(Array data, int total) {
-        long start = System.currentTimeMillis();
-
-        for (int j = 0; j < total; j++)
-            data.add("Test " + j);
-
-        System.out.println(data + " testAddArray: " +
-                (System.currentTimeMillis() - start));
-    }
 }

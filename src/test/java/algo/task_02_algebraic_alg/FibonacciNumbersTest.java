@@ -16,11 +16,11 @@ import static algo.task_02_algebraic_alg.FibonacciNumbers.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FibonacciNumbersTest extends BaseTest{
-    private static final String PATH = BaseTest.ROOT_DATA_PATH + "/task_02_algebraic_alg/4.Fibo";
+    private static final String PATH = ROOT_DATA_PATH + "/task_02_algebraic_alg/4.Fibo";
 
     private static Stream<Arguments> getAllArgs() throws Exception {
-        Map<String, String> fileNames = BaseTest.getFilesList(PATH);
-        return BaseTest.getArguments(fileNames);
+        Map<String, String> fileNames = getFilesList(PATH);
+        return getArguments(fileNames);
     }
 
     @ParameterizedTest

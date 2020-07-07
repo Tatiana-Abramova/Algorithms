@@ -11,11 +11,11 @@ import java.util.stream.Stream;
  * A base class for the dynamic array implementations comparative performance testing.
  */
 public class ArraysComparativeTest extends BaseTest {
-    private static final String PATH = BaseTest.ROOT_DATA_PATH + "/task_04_dynamic_arrays";
+    private static final String PATH = ROOT_DATA_PATH + "/task_04_dynamic_arrays";
 
     static Stream<Arguments> getAllArgs() throws Exception {
-        Map<String, String> fileNames = BaseTest.getFilesList(PATH);
-        return BaseTest.getArguments(fileNames);
+        Map<String, String> fileNames = getFilesList(PATH);
+        return getArguments(fileNames);
     }
 
     static void fillArray(Array data, int total) {

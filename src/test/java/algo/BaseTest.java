@@ -79,6 +79,23 @@ public class BaseTest {
     }
 
     /**
+     * Reads and returns a content of a given file.
+     * @param content content to write.
+     * @return file content.
+     */
+    protected static void writeFileContent(String content, String filename) throws Exception {
+        if (content == null) {
+            throw new Exception("Null content");
+        }
+        try {
+            Files.write(Paths.get(filename), content.getBytes());
+        } catch (IOException e) {
+            throw new Exception("Cannot write file '" + filename + "' content: " +
+                    e.getLocalizedMessage(), e);
+        }
+    }
+
+    /**
      * Runs a function and calculates its execution time.
      * @param fn a function.
      * @return average execution time in ns.

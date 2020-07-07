@@ -12,11 +12,11 @@ import java.util.stream.Stream;
 import static algo.task_03_bits.BitKnight.calcPossibleMoves;
 
 public class BitKnightTest extends BaseTest{
-    private static final String PATH = BaseTest.ROOT_DATA_PATH + "/task_03_bits/0.BITS/2.Bitboard - Конь";
+    private static final String PATH = ROOT_DATA_PATH + "/task_03_bits/0.BITS/2.Bitboard - Конь";
 
     private static Stream<Arguments> getAllArgs() throws Exception {
-        Map<String, String> fileNames = BaseTest.getFilesList(PATH);
-        return BaseTest.getArguments(fileNames);
+        Map<String, String> fileNames = getFilesList(PATH);
+        return getArguments(fileNames);
     }
 
     @ParameterizedTest

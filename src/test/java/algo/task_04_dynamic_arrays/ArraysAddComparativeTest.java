@@ -41,5 +41,4 @@ public class ArraysAddComparativeTest extends ArraysComparativeTest {
                 new Actions.ActionDetail("ArrayList Wrapper 1000", () -> fillArray(wrapperArray1, n)),
                 new Actions.ActionDetail("ArrayList Wrapper 10000", () -> fillArray(wrapperArray2, n)));
     }
-
 }
